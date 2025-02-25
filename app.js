@@ -11,13 +11,13 @@ function adicionarAmigo() {
     }
     amigos.push(nome)
     listaAmigos.innerHTML = amigos
+    limparCampos()
 
         
     }
 
 
-    limparCampos()
 function limparCampos() {
-    nomes = document.querySelector("input");
-    nomes.value = "";
+    nome = document.querySelector("input");
+    nome.value = "";
 }
