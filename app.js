@@ -6,13 +6,22 @@ let amigos = [];
 //funcao para adicionar amigos
 function adicionarAmigo() {
     let nome = document.querySelector("input").value
+
+
+
+    //inseri o nome obrigatorio
     if (nome == "") {
         alert("Por Favor, insira um nome")
     }
+    if(amigos.includes(nome)){
+        return adicionarAmigo();
+    }
+
     amigos.push(nome)
     listaAmigos.innerHTML = amigos
     limparCampos()
 
+    
         
     }
 
