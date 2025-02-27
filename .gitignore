@@ -1,3 +1,5 @@
+projeto pessoal
+
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
 // um array para armazenar os nomes
@@ -14,7 +16,6 @@ function adicionarAmigo() {
         return;
     }
 
-    //Não repetir nomes
     if(amigos.includes(nomeAmigo)){
         return adicionarAmigo();
     }
@@ -22,22 +23,30 @@ function adicionarAmigo() {
 
     amigos.push(nomeAmigo)
     inputAmigo.value = "";
-    inputAmigo.focus();
+    inputAmigo.focus(); //pesquisa conceito
     listaDeNomesSorteados()
 
-    //adicionando nomes e criando um elemento de lista para cada nome
+
     function listaDeNomesSorteados () {
         let listaAmigos = document.getElementById("listaAmigos");
         listaAmigos.innerHTML = "";
 
         for(let i = 0; i < amigos.length; i++){
-            let item = document.createElement("li"); 
+            let item = document.createElement("li"); //pesquisar o conceito
             item.textContent = amigos[i];
-            listaAmigos.appendChild(item); 
+            listaAmigos.appendChild(item); //pesquisa o conceito
         }
     }
-}
-    //funcao para selecionar um vencedor
+
+    //listaAmigos.innerHTML = amigos
+    //limparCampos()
+    /*
+function limparCampos() {
+    nomeAmigo = document.querySelector("input");
+    nomeAmigo.value = "";
+    }
+*/
+    }
     function sortearAmigo() {
         if (amigos.length === 0) {
             alert("Nenhum nome adicionado")
