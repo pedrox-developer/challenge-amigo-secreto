@@ -14,16 +14,14 @@ function adicionarAmigo() {
         return;
     }
 
-    //Não repetir nomes
-    if(amigos.includes(nomeAmigo)){
-        return adicionarAmigo();
-    }
+   
     
 
     amigos.push(nomeAmigo)
     inputAmigo.value = "";
     inputAmigo.focus();
     listaDeNomesSorteados()
+    amigos.includes(nomeAmigo)
 
     //adicionando nomes e criando um elemento de lista para cada nome
     function listaDeNomesSorteados () {
@@ -49,4 +47,5 @@ function adicionarAmigo() {
 
         let limparLista = document.getElementById("listaAmigos");
         limparLista.innerHTML = "";
+        amigos.includes(amigos)
     }
