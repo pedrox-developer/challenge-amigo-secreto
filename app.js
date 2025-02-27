@@ -14,9 +14,6 @@ function adicionarAmigo() {
         return;
     }
 
-   
-    
-
     amigos.push(nomeAmigo)
     inputAmigo.value = "";
     inputAmigo.focus();
